@@ -178,7 +178,11 @@ i {
   scrollbar-width: none;
   height: 250px;
 }
-
+.is-active {
+  background: rgba(95, 56, 56, 0.5);
+  backdrop-filter: blur(30px) hue-rotate(20deg);
+  transition: all 0.3s ease;
+}
 .player .music  .song-1, .player .music .song-2, .player .music .song-3, .player .music .song-4 {
   height: 80px;
   display: flex;
