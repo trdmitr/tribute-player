@@ -126,20 +126,7 @@ for (x = 0; x < src.length; x++) {
     // albumArt.src = img;
     // albumArt.alt = artist + " " + track;
     // document.player-ui.style.background.src = url(img);
-    // document.getElementById('fone').src = img;
+    document.getElementById('fone').src = img;
     document.getElementById('audio').src = audio;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
 })
