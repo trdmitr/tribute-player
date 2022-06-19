@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Material music player</title>
+  <link href="https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="style.css?v1.1">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="player">
+	<div class="cover"></div>
+	<nav>
+		<div class="left">
+			<!-- <i class="material-icons">menu</i> -->
+			<i class="material-icons">queue_music</i>
+			<h6>Трибьют Подземки</h6>
+		</div>
+		<!-- <div class="right">
+			<i class="material-icons search">search</i>
+			<i class="material-icons">queue_music</i>
+		</div> -->
+	</nav>
+	<div class="player-ui "id='fone'>
+		<div class="title">
+			<h3></h3>
+		</div>
+		<!-- <div class="small">
+			<i class="material-icons">replay</i>
+			<p>Adele6</p>
+			<i class="material-icons">volume_up</i>
+		</div> -->
+		<!-- <div class="progress">
+			<div class="played">
+				<div class="circle"></div>
+			</div>
+		</div> -->
+		<div class="controls">
+			<!-- <i class="material-icons" id="prev" title="">skip_previous</i>
+			<i class="material-icons play_arrow" id="play" title="play_arrow">play_arrow</i>
+			<i class="material-icons" id="next" title="">skip_next</i> -->
+			<!-- <i class="material-icons" id="pause">pause</i> -->
+			<!-- <i class="fas fa-backward" id="prev" title="Previous"></i> -->
+            <!-- <i class="fas fa-play main-button" id="play" title="Play"></i> -->
+            <!-- <i class="fas fa-forward" id="next" title="Next"></i> -->
+			<div id='image'>
+            <img src='' alt='' id='art' />
+          </div>
+          <audio controls src='' id='audio'>
+          </audio>
+		</div>
+		
+	</div>
+	<!-- <div class="btn">
+		<i class="material-icons">shuffle</i>
+	</div> -->
+	<div class="music" id="manlist">
+		<!-- <div class="song-1"> -->
+			<!-- <div class="info">
+				<div class="img first"></div>
+				<div class="titles">
+					<h5>Hello</h5>
+					<p>Adele</p>
+				</div>
+			</div> -->
+			<!-- <div class="state playing">
+				<i class="material-icons">equalizer</i>
+			</div> -->
+		<!-- </div> -->
+		<div id='list'>
+		<!-- <div class="song-2">
+			<div class="info">
+				<div class="img second"></div>
+				<div class="titles">
+					<h5>Californication</h5>
+					<p>Red Hot Chili Pepers</p>
+				</div>
+			</div>
+		</div>
+			<div class="state">
+				<i class="material-icons">play_arrow</i>
+			</div>
+		</div> -->
+		<!-- <div class="song-2">
+			<div class="info">
+				<div class="img third"></div>
+				<div class="titles">
+					<h5>6 INCH</h5>
+					<p>beyoncé</p>
+				</div>
+			</div>
+			<div class="state">
+				<i class="material-icons">play_arrow</i>
+			</div>
+		</div> -->
+		<!-- <div class="song-4">
+			<div class="info">
+				<div class="img fourth"></div>
+				<div class="titles">
+					<h5>Purple rain</h5>
+					<p>Prince & The Revolution</p>
+				</div>
+			</div>
+			<div class="state">
+				<i class="material-icons">play_arrow</i>
+			</div>
+		</div> -->
+	</div>
+</div>
+<!-- partial -->
+<script src="build.js"></script>
+</body>
+</html>
