@@ -235,3 +235,10 @@ i {
 .player .music .song-1 .state i, .player .music .song-2 .state i, .player .music .song-3 .state i, .player .music .song-4 .state i {
   color: #ddd;
 }
+audio::-webkit-media-controls-enclosure {
+
+  /* background-color: rgb(17,103,75); */
+  /* background: radial-gradient(circle, rgba(17,103,75,1) 0%, rgba(214,227,218,0.9158721838344713) 100%); */
+  background: rgb(136, 146, 143);
+/* background: linear-gradient(194deg, rgba(17,103,75,1) 0%, rgba(214,227,218,0.9158721838344713) 100%); */
+  }
