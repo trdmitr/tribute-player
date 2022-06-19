@@ -36,24 +36,24 @@ const title = document.getElementById('title')
 // const artist = document.getElementById('artist')
 
 // проверка play
-// let isPlaying = false;
+let isPlaying = false;
 
-// // Play
-// function playSong() {
-//     isPlaying = true;
-//     playBtn.classList.replace('fa-play', 'fa-pause');
-//     playBtn.setAttribute('title', 'Pause');
-//     console.log (isPlaying)
-//     displayTrack(0);
-// }
-// function pauseSong() {
-//     isPlaying = false;
-//     playBtn.classList.replace('fa-pause', 'fa-play');
-//     playBtn.setAttribute('title', 'Play');
-//     displayTrack(0);
-// }
+// Play
+function playSong() {
+    isPlaying = true;
+    playBtn.classList.replace('fa-play', 'fa-pause');
+    playBtn.setAttribute('title', 'Pause');
+    console.log (isPlaying)
+    displayTrack(0);
+}
+function pauseSong() {
+    isPlaying = false;
+    playBtn.classList.replace('fa-pause', 'fa-play');
+    playBtn.setAttribute('title', 'Play');
+    displayTrack(0);
+}
 
-// playBtn.addEventListener('click', () => (isPlaying ? pauseSong() : playSong()));
+playBtn.addEventListener('click', () => (isPlaying ? pauseSong() : playSong()));
 
 
 // function loadSong(song) {
@@ -131,4 +131,9 @@ for (x = 0; x < src.length; x++) {
     audio.autoplay = true;
     
   }
+  function loadSong(song) {
+    
+    music.src = audio;
+   
+}
 })
