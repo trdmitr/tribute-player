@@ -7,16 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
           ],
     
           [
-            "Виталий Подземный", "Оркестр", "https://drive.google.com/uc?export=download&id=18qiNsOlitUBshi44eTwBZ_bDFsrmZ633",
+            "Виталий Подземный", "Перемен", "https://drive.google.com/uc?export=download&id=1fRTIhCoCY5Gj1gtq7AKH13gqgmcmfYOH",
             "https://sun9-west.userapi.com/sun9-54/s/v1/if2/Kas3ZayJT1cUz0XqcTgruytNGALR64AAD2559vtgUao9BdO8Nqr20sbvjoLgv3hRswfnR_GtbpzFkZlkfpxdCGbt.jpg?size=2560x1824&quality=96&type=album"
           ],
           [
-            "Artyom Smallkid", "Рай в шалаше", 
-            "https://drive.google.com/uc?export=download&id=1iQFYzTT8z19bNpdivUxSGl6fE_vZoLYA",
+            "Artyom Smallkid", "Время есть", 
+            "https://drive.google.com/uc?export=download&id=17ho5guMk-ZHmcol8G4a3cWqSGXC1gIrU",
             "https://sun9-east.userapi.com/sun9-20/s/v1/if1/RV3MYsymr16997zW5iqpXpkkJxQJaY0CRLb4djtWShX7bCRdQu96JMvpvbhNnAoy472sUg.jpg?size=2560x1696&quality=96&type=album"
           ],
           [
-            "Жанат Акбулатов", "Скажи", "https://drive.google.com/uc?export=download&id=1ducPiuhjzibvTfxErHMRWAWMU1npHUFZ",
+            "Жанат Акбулатов", "Мама-Анархия", "https://drive.google.com/uc?export=download&id=18DYMMv_3gI2fhkeGRsN3r--omMoXLfWm",
              "https://sun9-east.userapi.com/sun9-59/s/v1/if2/E8Tp_8c2ohYFCLtAirJe1uc7k5BTFyrfPSoAIbRX3gTb4nwn2Qr8S9oxga2QdgXeHQc5gjTgiMTofqK1rr120_iy.jpg?size=400x400&quality=95&type=album"
           ],
           [
@@ -68,12 +68,14 @@ for (x = 0; x < src.length; x++) {
     var number = parseInt(x) + 1;
     var artist = document.createTextNode(s[0]);
     var track_name = document.createTextNode(s[1]);
+    // image.src = s[3];
+    console.log(s[3])
     
     var listItem = document.createElement('div');
     var listItemSong = document.createElement('div');
     var listItemInf = document.createElement("div");
+    var listItemImg = document.createElement('div');
     var listItemTit= document.createElement("div");
-    // var listItemImg = document.createElement('div');
     var artist_text = document.createElement('h5');
     var track_text = document.createElement('p');
     //    
@@ -83,14 +85,18 @@ for (x = 0; x < src.length; x++) {
     artist_text.appendChild(artist);
     track_text.appendChild(track_name);
     listItem.appendChild(listItemSong);
+    
     listItemSong.appendChild(listItemInf);
+    listItemInf.appendChild(listItemImg);
     listItemInf.appendChild(listItemTit)
+    
     listItemTit.appendChild(artist_text);
     listItemTit.appendChild(track_text);
     
     listItem.classList.add('item');
     listItemSong.classList.add('song-4');
     listItemInf.classList.add('info');
+    listItemImg.classList.add('img')
     listItemTit.classList.add('titles')
     // listItemImg.classList.add('img fourth');
     listItem.dataset.index = x;
@@ -128,5 +134,7 @@ for (x = 0; x < src.length; x++) {
     // document.player-ui.style.background.src = url(img);
     // document.getElementById('fone').src = img;
     document.getElementById('audio').src = audio; 
+    // document.getElementById('img').srs = image;
+    // image.src = img;
   }
 })
