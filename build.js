@@ -26,13 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     ];
 
-    const music = document.getElementById('audio');
+    const music = document.querySelector('audio');
 const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
 const nextBtn = document.getElementById('next');
 
-const image = document.querySelector('img')
-const title = document.getElementById('title')
+const image = document.querySelector('.imagg img')
+
+// const title = document.getElementById('titles')
 // const artist = document.getElementById('artist')
 
 // проверка play
@@ -68,13 +69,26 @@ for (x = 0; x < src.length; x++) {
     var number = parseInt(x) + 1;
     var artist = document.createTextNode(s[0]);
     var track_name = document.createTextNode(s[1]);
-    // image.src = s[3];
-    console.log(s[3])
+    // document.querySelector('.imagg img').src  = s[3];
+    // document.querySelector('.imagg img').src = kart
+    
+    const title = document.getElementById('titles')
+    //  kart = 
+     var img2 = new Image();
+    //  img.src = s[3];
+    var img2 = document.createElement('img'); // Используем HTMLImageElement
+img2.src = s[3];
+img2.alt = 'alt text';
+// listItemInf.appendChild(img2);
+    // const cover = document.querySelector(".img");
+    // cover.setAttribute("src", img.src);
+    console.log(img2.src)
     
     var listItem = document.createElement('div');
     var listItemSong = document.createElement('div');
     var listItemInf = document.createElement("div");
     var listItemImg = document.createElement('div');
+    // var listItemImage = document.createElement('img');
     var listItemTit= document.createElement("div");
     var artist_text = document.createElement('h5');
     var track_text = document.createElement('p');
@@ -84,10 +98,12 @@ for (x = 0; x < src.length; x++) {
     
     artist_text.appendChild(artist);
     track_text.appendChild(track_name);
+    // img2.appendChild(listItemImg);
     listItem.appendChild(listItemSong);
     
     listItemSong.appendChild(listItemInf);
     listItemInf.appendChild(listItemImg);
+    listItemImg.appendChild(img2);
     listItemInf.appendChild(listItemTit)
     
     listItemTit.appendChild(artist_text);
@@ -96,9 +112,9 @@ for (x = 0; x < src.length; x++) {
     listItem.classList.add('item');
     listItemSong.classList.add('song-4');
     listItemInf.classList.add('info');
-    listItemImg.classList.add('img')
+    img2.classList.add('img')
     listItemTit.classList.add('titles')
-    // listItemImg.classList.add('img fourth');
+    // listItemImage.classList.add('img');
     listItem.dataset.index = x;
     
     document.getElementById('list').appendChild(listItem);
@@ -124,17 +140,22 @@ for (x = 0; x < src.length; x++) {
         artist = s[0],
         track = s[1],
         audio = s[2],
-        img = s[3],
+        // image = s[3],
         number = parseInt(x) + 1;
     // document.getElementById('title').innerText = number + ": " + artist;
     // document.getElementById('song_title').innerText = track;
     var albumArt = document.getElementById('art');
     // albumArt.src = img;
     // albumArt.alt = artist + " " + track;
-    // document.player-ui.style.background.src = url(img);
+    // console.log(document.player.style.background)
+    // document.player-ui.style.background == "url('image')";
     // document.getElementById('fone').src = img;
     document.getElementById('audio').src = audio; 
+    var matches = document.querySelector("#fone");
+    matches.style.backgroundColor = "yellow";
+    // document.querySelector('.imagg img').src = image;
     // document.getElementById('img').srs = image;
     // image.src = img;
+    // console.log(matches)
   }
 })
