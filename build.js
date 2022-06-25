@@ -26,75 +26,32 @@ document.addEventListener('DOMContentLoaded', () => {
     
     ];
 
-    const music = document.querySelector('audio');
+const music = document.querySelector('audio');
 const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
 const nextBtn = document.getElementById('next');
 
 const image = document.querySelector('.imagg img')
 
-// const title = document.getElementById('titles')
-// const artist = document.getElementById('artist')
-
-// проверка play
-// let isPlaying = false;
-
-// // Play
-// function playSong() {
-//     isPlaying = true;
-//     playBtn.classList.replace('fa-play', 'fa-pause');
-//     playBtn.setAttribute('title', 'Pause');
-//     console.log (isPlaying)
-//     displayTrack(0);
-// }
-// function pauseSong() {
-//     isPlaying = false;
-//     playBtn.classList.replace('fa-pause', 'fa-play');
-//     playBtn.setAttribute('title', 'Play');
-//     displayTrack(0);
-// }
-
-// playBtn.addEventListener('click', () => (isPlaying ? pauseSong() : playSong()));
-
-
-// function loadSong(song) {
-//     title.textContent = song.displayName;
-//     artist.textContent = song.artist;
-//     music.src = `music/${song.displayName}.mp3`;
-//     image.src = `img/${song.name}.jpg`;
-// }
-
 for (x = 0; x < src.length; x++) {
     var s = src[x];
     var number = parseInt(x) + 1;
     var artist = document.createTextNode(s[0]);
     var track_name = document.createTextNode(s[1]);
-    // document.querySelector('.imagg img').src  = s[3];
-    // document.querySelector('.imagg img').src = kart
-    
     const title = document.getElementById('titles')
-    //  kart = 
-     var img2 = new Image();
-    //  img.src = s[3];
+    var img2 = new Image();
     var img2 = document.createElement('img'); // Используем HTMLImageElement
-img2.src = s[3];
-img2.alt = 'alt text';
-// listItemInf.appendChild(img2);
-    // const cover = document.querySelector(".img");
-    // cover.setAttribute("src", img.src);
-    console.log(img2.src)
+    img2.src = s[3];
+    img2.alt = 'alt text';
+    // console.log(img2.src)
     
     var listItem = document.createElement('div');
     var listItemSong = document.createElement('div');
     var listItemInf = document.createElement("div");
     var listItemImg = document.createElement('div');
-    // var listItemImage = document.createElement('img');
     var listItemTit= document.createElement("div");
     var artist_text = document.createElement('h5');
     var track_text = document.createElement('p');
-    //    
-    // listItemInf.classList.add('info');
-    // listItem.appendChild(listItemInf);
     
     artist_text.appendChild(artist);
     track_text.appendChild(track_name);
@@ -114,7 +71,6 @@ img2.alt = 'alt text';
     listItemInf.classList.add('info');
     img2.classList.add('img')
     listItemTit.classList.add('titles')
-    // listItemImage.classList.add('img');
     listItem.dataset.index = x;
     
     document.getElementById('list').appendChild(listItem);
