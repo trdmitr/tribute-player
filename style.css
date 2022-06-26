@@ -63,8 +63,11 @@ i {
 #fone {
   
   background-size:  cover   !important;
-  
-
+}
+audio { display:none;}
+.player .player-ui .controls i {
+  color: rgb(43, 133, 77) !important;
+  font-size: 32px;
 }
 .player nav .left {
   display: flex;

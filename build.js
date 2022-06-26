@@ -107,6 +107,58 @@ for (x = 0; x < src.length; x++) {
     var matches = document.querySelector("#fone");
     matches.style.background = `url(${image})`;
     // console.log(matches.style.background)
-    music.play()
+    // music.play()
   }
+  let isPlaying = false;
+  function playSong() {
+    isPlaying = true;
+    playBtn.classList.replace('fa-play', 'fa-pause');
+    playBtn.setAttribute('title', 'Pause');
+    console.log (isPlaying)
+    // displayTrack(0);
+    music.play()
+}
+function pauseSong() {
+  isPlaying = false;
+  playBtn.classList.replace('fa-pause', 'fa-play');
+  playBtn.setAttribute('title', 'Play');
+  // displayTrack(0);
+  music.pause()
+}
+
+playBtn.addEventListener('click', () => (isPlaying ? pauseSong() : playSong()));
+let songIndex = 0;
+//prev song
+ function prevSong() {
+     songIndex--;
+     if (songIndex < 0) {
+         songIndex = src.length - 1;
+     }
+     console.log(songIndex)
+     console.log("click oo!")
+    //  loadSong(src[songIndex]);
+     displayTrack(songIndex);
+     playSong();
+ }
+//next song
+
+function nextSong() {
+    songIndex++;
+    if (songIndex > src.length - 1) {
+        songIndex = 0;
+    }
+    //console.log(songIndex)
+    console.log("click oo2!")
+    // loadSong(src[songIndex]);
+    displayTrack(songIndex);
+    playSong();
+
+}
+ // Выбор пестни
+//  loadSong(src[songIndex]);
+
+ prevBtn.addEventListener('click', prevSong);
+ nextBtn.addEventListener('click', nextSong);
+ music.addEventListener('ended', nextSong);
+
 })
