@@ -42,7 +42,7 @@ for (x = 0; x < src.length; x++) {
     var img2 = new Image();
     var img2 = document.createElement('img'); // Используем HTMLImageElement
     img2.src = s[3];
-    img2.alt = 'alt text';
+    img2.alt = artist;
     // console.log(img2.src)
     
     var listItem = document.createElement('div');
@@ -96,22 +96,16 @@ for (x = 0; x < src.length; x++) {
         artist = s[0],
         track = s[1],
         audio = s[2],
-        // image = s[3],
+        image = s[3],
         number = parseInt(x) + 1;
     // document.getElementById('title').innerText = number + ": " + artist;
     // document.getElementById('song_title').innerText = track;
     var albumArt = document.getElementById('art');
     // albumArt.src = img;
-    // albumArt.alt = artist + " " + track;
-    // console.log(document.player.style.background)
-    // document.player-ui.style.background == "url('image')";
-    // document.getElementById('fone').src = img;
+    albumArt.alt = artist + " " + track;
     document.getElementById('audio').src = audio; 
     var matches = document.querySelector("#fone");
-    matches.style.backgroundColor = "yellow";
-    // document.querySelector('.imagg img').src = image;
-    // document.getElementById('img').srs = image;
-    // image.src = img;
-    // console.log(matches)
+    matches.style.background = `url(${image})`;
+    // console.log(matches.style.background)
   }
 })
