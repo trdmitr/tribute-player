@@ -107,5 +107,6 @@ for (x = 0; x < src.length; x++) {
     var matches = document.querySelector("#fone");
     matches.style.background = `url(${image})`;
     // console.log(matches.style.background)
+    music.play()
   }
 })
