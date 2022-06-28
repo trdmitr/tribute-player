@@ -126,8 +126,8 @@ audio { display:none;}
 }
 .player .player-ui .progress {
   position: relative;
-  height: 2px;
-  margin: 30px 20px 0px 20px;
+  height: 18px;
+  margin: 25px 22px -14px -1px;
   background: rgba(255, 255, 255, 0.3);
 }
 .player .player-ui .progress .played {
@@ -148,7 +148,7 @@ audio { display:none;}
 .player .player-ui .controls {
   display: flex;
   justify-content: space-between;
-  padding: 60px 50px 0px 50px;
+  padding: 60px 50px 10px 50px;
 }
 .player .player-ui .controls i {
   color: rgb(202, 35, 35);
@@ -250,4 +250,29 @@ audio::-webkit-media-controls-enclosure {
   /* background: radial-gradient(circle, rgba(17,103,75,1) 0%, rgba(214,227,218,0.9158721838344713) 100%); */
   background: rgb(136, 146, 143);
 /* background: linear-gradient(194deg, rgba(17,103,75,1) 0%, rgba(214,227,218,0.9158721838344713) 100%); */
+  }
+  .progress-container {
+    background: rgba(13, 216, 98, 0.568);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 11px 20px;
+    height: 18px;
+    width: 90%;
+    font: bold;
+    color:rgb(23, 221, 106)
+  }
+  
+  .progress {
+    background: rgba(230, 12, 12, 0.3);
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+  }
+  
+  .duration-wrapper {
+    position: relative;
+    top: -25px;
+    display: flex;
+    justify-content: space-between;
   }
